@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
 
 
-        private int _answer;
+        private double _answer;
         public Calculator()
         {
             InitializeComponent();
@@ -40,34 +40,60 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-             _answer = Convert.ToInt32(FirstNumberInput.Text) + Convert.ToInt32(SecondNumberInput.Text);
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    _answer = Convert.ToDouble(FirstNumberInput.Text) + Convert.ToDouble(SecondNumberInput.Text);
 
 
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-             _answer = Convert.ToInt32(FirstNumberInput.Text) - Convert.ToInt32(SecondNumberInput.Text);
+        //}
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    _answer = Convert.ToDouble(FirstNumberInput.Text) - Convert.ToDouble(SecondNumberInput.Text);
 
-        }
+        //}
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-             _answer = Convert.ToInt32(FirstNumberInput.Text) * Convert.ToInt32(SecondNumberInput.Text);
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    _answer = Convert.ToDouble(FirstNumberInput.Text) * Convert.ToDouble(SecondNumberInput.Text);
 
-        }
+        //}
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-             _answer = Convert.ToInt32(FirstNumberInput.Text) / Convert.ToInt32(SecondNumberInput.Text);
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //    _answer = Convert.ToDouble(FirstNumberInput.Text) / Convert.ToDouble(SecondNumberInput.Text);
 
-        }
+        //}
 
 
         private void button_Calculate_Click(object sender, EventArgs e)
         {
             MessageBox.Show(_answer.ToString());
+        }
+
+
+        private void Calculate(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            switch (btn.Text)
+            {
+                case "+":
+                    _answer = Convert.ToDouble(FirstNumberInput.Text) + Convert.ToDouble(SecondNumberInput.Text);
+                    break;
+                case "-":
+                    _answer = Convert.ToDouble(FirstNumberInput.Text) - Convert.ToDouble(SecondNumberInput.Text);
+                    break;
+                case "*":
+                    _answer = Convert.ToDouble(FirstNumberInput.Text) * Convert.ToDouble(SecondNumberInput.Text);
+                    break;
+                case "/":
+                    _answer = Convert.ToDouble(FirstNumberInput.Text) / Convert.ToDouble(SecondNumberInput.Text);
+                    break;
+                default:
+                    MessageBox.Show("Incorrects math operator");
+                    break;
+            }
+
+
         }
     }
 }

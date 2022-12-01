@@ -73,7 +73,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Calculate);
             // 
             // button2
             // 
@@ -85,7 +85,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Calculate);
             // 
             // button3
             // 
@@ -97,7 +97,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "*";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Calculate);
             // 
             // button4
             // 
@@ -109,7 +109,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "/";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Calculate);
             // 
             // label3
             // 
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 517);
+            this.ClientSize = new System.Drawing.Size(368, 517);
             this.Controls.Add(this.FirstNumberInput);
             this.Controls.Add(this.SecondNumberInput);
             this.Controls.Add(this.button5);
